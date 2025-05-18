@@ -20,11 +20,11 @@ export function Navbar() {
             About
           </Link>
           <Link href="/dashboard" className="text-sm font-medium hover:text-teal-600 transition-colors">
-            Dashboard
+           Demo
           </Link>
-          <Link href="/blog" className="text-sm font-medium hover:text-teal-600 transition-colors">
+          {/* <Link href="/blog" className="text-sm font-medium hover:text-teal-600 transition-colors">
             Blog
-          </Link>
+          </Link> */}
           <Link href="/contact" className="text-sm font-medium hover:text-teal-600 transition-colors">
             Contact
           </Link>

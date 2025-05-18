@@ -102,9 +102,9 @@ export default function HomePage() {
                 <Button className="bg-white text-teal-600 hover:bg-gray-100" asChild>
                   <Link href="/contact">Contact Us</Link>
                 </Button>
-                <Button variant="outline" className="border-white text-white hover:bg-teal-700" asChild>
+                {/* <Button variant="outline" className="border-white text-white hover:bg-teal-700" asChild>
                   <Link href="/blog">Read Our Blog</Link>
-                </Button>
+                </Button> */}
               </div>
             </div>
           </div>
