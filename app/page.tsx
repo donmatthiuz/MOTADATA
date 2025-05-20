@@ -13,26 +13,25 @@ export default function HomePage() {
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="space-y-4">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Predicting River Contamination in the Lower Motagua Basin
+                  Prediccion del nivel de clorofila en la cuenca alta del Rio Motagua
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                  Our advanced AI system monitors and predicts contamination levels in the Motagua River, helping
-                  protect ecosystems and communities that depend on this vital water source.
+                  Nuestro sistema predice el comportamiento de la clorofia en la cuenca alta del rio Motagua, detectando fuentes de eutroficacion y quimicos que maten la vida en el rio
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Button className="bg-teal-600 hover:bg-teal-700" asChild>
                     <Link href="/about">
-                      Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                      Ver mas <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
                   <Button variant="outline" asChild>
-                    <Link href="/dashboard">View Demo</Link>
+                    <Link href="/dashboard">Demo</Link>
                   </Button>
                 </div>
               </div>
               <div className="relative h-[300px] lg:h-[400px] rounded-xl overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src="/rio-motagua1-768x425.jpg"
                   alt="Motagua River"
                   fill
                   className="object-cover"
@@ -47,12 +46,10 @@ export default function HomePage() {
         <section id="problem" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="inline-block rounded-lg bg-teal-100 px-3 py-1 text-sm text-teal-700">The Problem</div>
-              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">River Contamination Crisis</h2>
+              <div className="inline-block rounded-lg bg-teal-100 px-3 py-1 text-sm text-teal-700">El problema</div>
+              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">Contaminacion del rio Motagua</h2>
               <p className="max-w-[700px] text-muted-foreground md:text-xl">
-                The lower Motagua River basin faces severe contamination challenges from industrial waste, agricultural
-                runoff, and urban pollution. This threatens local ecosystems, public health, and the livelihoods of
-                communities that depend on the river.
+                La cuenca alta del rio Motagua es contaminada por quimicos que afectan la diversidad de vida que se encuentra. Por ende los niveles de clorofila suelen bajar
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
@@ -60,27 +57,30 @@ export default function HomePage() {
                 <div className="p-2 bg-red-100 rounded-full">
                   <Droplets className="h-6 w-6 text-red-600" />
                 </div>
-                <h3 className="text-xl font-bold">Water Quality Decline</h3>
+                <h3 className="text-xl font-bold">La calidad del agua</h3>
                 <p className="text-center text-muted-foreground">
-                  Dangerous levels of pollutants affecting drinking water and aquatic life
+                 Una poca diversidad en los rios se traduce como presencia de agentes quimicos que pueden ser perjudiciales para la salud humana
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-2 border rounded-lg p-6 bg-white shadow-sm">
                 <div className="p-2 bg-amber-100 rounded-full">
                   <MapPin className="h-6 w-6 text-amber-600" />
                 </div>
-                <h3 className="text-xl font-bold">Ecosystem Damage</h3>
+                <h3 className="text-xl font-bold">Supuestos</h3>
                 <p className="text-center text-muted-foreground">
-                  Biodiversity loss and habitat destruction in and around the river
+                  La falta de recursos puede llevar a que la planeación de medidas ecológicas sufra de cierto retraso en la toma de decisiones de las autoridades gubernamentales.
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-2 border rounded-lg p-6 bg-white shadow-sm">
                 <div className="p-2 bg-blue-100 rounded-full">
                   <BarChart2 className="h-6 w-6 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-bold">Unpredictable Changes</h3>
+                <h3 className="text-xl font-bold">Posibles usuarios:</h3>
                 <p className="text-center text-muted-foreground">
-                  Lack of early warning systems for contamination spikes and events
+                  Personas que viven cerca de los ríos afectados.
+Gobiernos locales
+Personas y/o ONGs interesadas en formar programas de manejo adecuado de desechos y/o creación de material educativo referente a la contaminación.
+
                 </p>
               </div>
             </div>
@@ -92,15 +92,14 @@ export default function HomePage() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
-                Join Our Effort to Protect the Motagua River
+               Une tus fuerzas para poder combatir la contaminacion del Rio Motagua
               </h2>
               <p className="max-w-[700px] md:text-xl">
-                Whether you're a government agency, environmental organization, or concerned citizen, our prediction
-                system can help you make a difference.
+               Si eres una ONG, un gobierno o un civil que nos quiere apoyar para llevar a cabo el proyecto
               </p>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Button className="bg-white text-teal-600 hover:bg-gray-100" asChild>
-                  <Link href="/contact">Contact Us</Link>
+                  <Link href="/contact">Contactanos</Link>
                 </Button>
                 {/* <Button variant="outline" className="border-white text-white hover:bg-teal-700" asChild>
                   <Link href="/blog">Read Our Blog</Link>

@@ -20,15 +20,15 @@ export function Footer() {
       <div className="container mt-4 flex flex-col md:flex-row justify-center gap-8 md:gap-12">
         <div className="flex items-center">
           <Mail className="mr-2 h-5 w-5 text-teal-600" />
-          <span>contact@motadata.org</span>
+          <span>cor22982@uvg.edu.gt</span>
         </div>
         <div className="flex items-center">
           <Phone className="mr-2 h-5 w-5 text-teal-600" />
-          <span>+502 1234 5678</span>
+          <span>+502 38731207</span>
         </div>
         <div className="flex items-center">
           <Github className="mr-2 h-5 w-5 text-teal-600" />
-          <span>github.com/motadata-project</span>
+          <span>github.com/donmatthiuz/MOTADATA</span>
         </div>
       </div>
     </footer>

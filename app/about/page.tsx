@@ -13,9 +13,9 @@ export default function AboutPage() {
       <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-teal-50 to-white">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">About MOTADATA</h1>
+            <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">Sobre el proyecto</h1>
             <p className="max-w-[700px] text-muted-foreground md:text-xl">
-              Our mission is to protect the Motagua River through advanced prediction technology
+              El algoritmo que usamos es una red neuronal que predice el nivel de clorofila en base a  diferentes variables (hierro disuelto, fosfato, nitrato, carbono disuelto)
             </p>
           </div>
         </div>
@@ -25,73 +25,108 @@ export default function AboutPage() {
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
             <div className="space-y-4">
-              <h2 className="text-3xl font-bold tracking-tighter">Our Story</h2>
+              <h2 className="text-3xl font-bold tracking-tighter">Clorofila</h2>
               <p className="text-muted-foreground md:text-lg">
-                MOTADATA was founded in 2023 by a team of environmental scientists, data analysts, and local community
-                leaders concerned about the increasing contamination in the lower Motagua River basin.
+                La clorofila es un compuesto liberado por las plantas, se usaron datos de las misiones sentinel desde enero de 2021 hasta enero 2025. Siendo observaciones diarias
               </p>
-              <p className="text-muted-foreground md:text-lg">
-                After witnessing the devastating effects of pollution on local ecosystems and communities, we set out to
-                create a solution that could predict contamination events before they became critical, allowing for
-                preventive action.
-              </p>
-              <p className="text-muted-foreground md:text-lg">
-                Today, our AI-powered prediction system helps protect one of Guatemala's most important water resources
-                and the communities that depend on it.
-              </p>
+             
             </div>
             <div className="relative h-[300px] lg:h-[400px] rounded-xl overflow-hidden">
-              <Image src="/placeholder.svg?height=400&width=600" alt="MOTADATA team" fill className="object-cover" />
+              <Image src="/predict.png" alt="MOTADATA team" fill className="object-cover" />
             </div>
           </div>
+          
+          <br/>
+           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+            <div className="relative h-[300px] lg:h-[400px] rounded-xl overflow-hidden">
+              <Image src="/fosforo_2026.png" alt="MOTADATA team" fill className="object-cover" />
+            </div>
+            
+            <div className="space-y-4">
+              <h2 className="text-3xl font-bold tracking-tighter">Variables</h2>
+              <p className="text-muted-foreground md:text-lg">
+                En base a esto se realizo un modelo para predecir como aumentarian o disminuirian las variables que predicen el comportamiento de la clorofila siendo (hierro disuelto, fosfato, nitrato, carbono disuelto), esto para el año 2026 usando un random forest.
+              </p>
+             
+            </div>
+        
+          </div>
+
+          <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+            <div className="space-y-4">
+              <h2 className="text-3xl font-bold tracking-tighter">Modelo</h2>
+              <p className="text-muted-foreground md:text-lg">
+                Con los datos que obtuvimos del año 2021 al 2025, realizamos una red neuronal para predecir el comportamiento de la clorofila. Obtuvimos un error MSE de 0.0003, lo cual, en el mundo de las IAs, equivale a decir que tuvimos una precisión altísima, prácticamente un ajuste perfecto del modelo.
+              </p>
+             
+            </div>
+            <div className="relative h-[300px] lg:h-[400px] rounded-xl overflow-hidden">
+              <Image src="/motadata.png" alt="MOTADATA team" fill className="object-cover" />
+            </div>
+          </div>
+<div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+            <div className="relative h-[300px] lg:h-[400px] rounded-xl overflow-hidden">
+              <Image src="/clorofila_final.png" alt="MOTADATA team" fill className="object-cover" />
+            </div>
+            
+            <div className="space-y-4">
+              <h2 className="text-3xl font-bold tracking-tighter">Prediccion</h2>
+              <p className="text-muted-foreground md:text-lg">
+              Al final, se predijo con este modelo que los niveles de clorofila subirían, lo cual significa un posible incremento en la productividad biológica del área analizada, aunque se ve que el aumento es bastante mayor lo cual puede deberse al fenomeno de eutroficacion que es un proceso ecológico en el que un cuerpo de agua (como un lago, río o zona costera) recibe un exceso de nutrientes, especialmente nitrógeno y fósforo, lo cual complementado con lo visto anteriormente con el fosforo es lo que esta ocurriendo.
+            </p>
+
+            </div>
+        
+          </div>
+
+          
+          
+          <br/>
         </div>
       </section>
 
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-slate-50">
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <h2 className="text-3xl font-bold tracking-tighter">Our Mission</h2>
-            <p className="max-w-[700px] text-muted-foreground md:text-xl">
-              We are committed to protecting water resources through technology, education, and community engagement.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-            <div className="flex flex-col items-center space-y-2 border rounded-lg p-6 bg-white shadow-sm">
-              <h3 className="text-xl font-bold">Predict</h3>
-              <p className="text-center text-muted-foreground">
-                Develop and deploy advanced AI models to predict contamination events with high accuracy
-              </p>
-            </div>
-            <div className="flex flex-col items-center space-y-2 border rounded-lg p-6 bg-white shadow-sm">
-              <h3 className="text-xl font-bold">Protect</h3>
-              <p className="text-center text-muted-foreground">
-                Enable timely interventions to protect ecosystems and communities from harmful pollution
-              </p>
-            </div>
-            <div className="flex flex-col items-center space-y-2 border rounded-lg p-6 bg-white shadow-sm">
-              <h3 className="text-xl font-bold">Preserve</h3>
-              <p className="text-center text-muted-foreground">
-                Work with stakeholders to develop long-term solutions for river conservation
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+    <section className="w-full py-12 md:py-24 lg:py-32 bg-slate-50">
+  <div className="container px-4 md:px-6">
+    <div className="flex flex-col items-center justify-center space-y-6 text-center">
+      <h2 className="text-3xl font-bold tracking-tighter">Video Pitch</h2>
+      <p className="max-w-2xl text-muted-foreground md:text-lg">
+        Te presentamos nuestro proyecto en este breve video explicativo.
+      </p>
+      <div className="w-full max-w-3xl aspect-video">
+        <iframe
+          className="w-full h-full rounded-xl shadow-lg"
+          src="https://www.youtube.com/embed/TBToM1BOylM"
+          title="Video Pitch"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
 
       <section className="w-full py-12 md:py-24 lg:py-32 bg-teal-600 text-white">
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <h2 className="text-3xl font-bold tracking-tighter">Join Our Mission</h2>
-            <p className="max-w-[700px] md:text-xl">
-              Whether you're a scientist, developer, or concerned citizen, there are many ways to contribute to our
-              work.
-            </p>
-            <Button className="bg-white text-teal-600 hover:bg-gray-100" asChild>
-              <Link href="/contact">Get Involved</Link>
-            </Button>
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
+               Une tus fuerzas para poder combatir la contaminacion del Rio Motagua
+              </h2>
+              <p className="max-w-[700px] md:text-xl">
+               Si eres una ONG, un gobierno o un civil que nos quiere apoyar para llevar a cabo el proyecto
+              </p>
+              <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <Button className="bg-white text-teal-600 hover:bg-gray-100" asChild>
+                  <Link href="/contact">Contactanos</Link>
+                </Button>
+                {/* <Button variant="outline" className="border-white text-white hover:bg-teal-700" asChild>
+                  <Link href="/blog">Read Our Blog</Link>
+                </Button> */}
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
     </div>
   )
 }
