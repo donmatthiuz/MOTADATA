@@ -67,6 +67,32 @@ plt.show()
 
 
 
+# Cargar nuevo dataset para predicciones
+df_pred = pd.read_csv("predicciones_2026.csv", parse_dates=['dia'])
+
+# Extraer variables predictoras
+X_pred = df_pred[['fosforo', 'nitrato', 'silicato', 'carbono_inorg_dislto', 'hierro']].values
+
+# Escalar con el mismo scaler
+X_pred_scaled = scaler.transform(X_pred)
+
+# Predecir con el modelo entrenado
+y_pred_2026 = model.predict(X_pred_scaled).flatten()
+
+# Añadir predicciones al dataframe original
+df_pred['clorofila_predicha'] = y_pred_2026
+
+# Mostrar algunas filas para verificar
+print(df_pred.head())
+
+# Crear un nuevo DataFrame con solo fecha y clorofila predicha
+df_salida = df_pred[['dia']].copy()
+df_salida['clorofila'] = y_pred_2026
+
+# Guardar el nuevo CSV con solo fecha y clorofila predicha
+df_salida.to_csv("predicciones_2026_clorofila.csv", index=False)
+
+print(df_salida.head())
 
 # Valores
 
